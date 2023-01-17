@@ -25,9 +25,8 @@ public class UserService {
     public UserResponse add(UserRequest userRequest) {
         User user = new User();
         user.setName(userRequest.getName());
-//        user.setAge(userRequest.getAge());
-//        user.setEmail(userRequest.getEmail());
-//        user.setPassword(userRequest.getPassword());
+        user.setEmail(userRequest.getEmail());
+
 
 //        EmailDetails emailDetails = new EmailDetails();
 //        emailDetails.setRecipient(user.getEmail());
