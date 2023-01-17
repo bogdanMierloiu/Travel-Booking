@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ro.turism.sda.project.ProjectApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.117 s - in ro.turism.sda.project.ProjectApplicationTests
