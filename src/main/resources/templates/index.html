@@ -15,18 +15,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
+    <style>
+        body {
+            background-image: url(/images/background.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
-
-<div th:each="destination : ${destinations}">
+<div style="display: flex">
     <div>
-        <label th:text="${destination.getDestinationName()}"></label>
-        <label th:text="${destination.getPrice()}"></label>
-        <form th:action="@{/destination/get-destination}">
-            <input type="hidden" name="id" th:value="${destination.id}">
-            <button type="submit"> Book</button>
-        </form>
+        <div>
+            <img th:src="@{images/amsterdam.jpg}" alt="Amsterdam picture" width="150" height="210">
+        </div>
+        <div>
+            <label th:text="${amsterdam.destinationName}"></label>
+            <label th:text="${amsterdam.description}"></label>
+            <label th:text="${amsterdam.price + ' euro'}"></label>
+            <form th:action="@{/destination/get-destination}">
+                <input type="hidden" name="id" th:value="${amsterdam.id}">
+                <button type="submit"> Book </button>
+            </form>
+        </div>
     </div>
+
 </div>
 
 <!--&lt;!&ndash;header&ndash;&gt;-->
@@ -173,7 +186,7 @@
 
 <!--    <div class="destination-content">-->
 <!--        <div class="col-content">-->
-<!--            <img src="/media/Frankfurt.jpg">-->
+<!--            <img src="/media/frankfurt.jpg">-->
 <!--            <h5>Germania</h5>-->
 <!--            <p>Frankfurt</p>-->
 <!--        </div>-->
@@ -191,7 +204,7 @@
 <!--        </div>-->
 
 <!--        <div class="col-content">-->
-<!--            <img src="/media/Amsterdam.jpg">-->
+<!--            <img src="/media/amsterdam.jpg">-->
 <!--            <h5>Olanda</h5>-->
 <!--            <p>Amsterdam</p>-->
 <!--        </div>-->
@@ -203,7 +216,7 @@
 <!--        </div>-->
 
 <!--        <div class="col-content">-->
-<!--            <img src="/media/Athena.jpg">-->
+<!--            <img src="/media/athena.jpg">-->
 <!--            <h5>Grecia</h5>-->
 <!--            <p>Atena</p>-->
 <!--        </div>-->

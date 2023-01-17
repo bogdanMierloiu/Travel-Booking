@@ -6,5 +6,8 @@
 </head>
 <body>
 <h2 th:text="${'Succesful reservation created for ' + reservationCreated.departureDate}"></h2>
+<form th:action="@{/index}">
+    <button type="submit"> Back to home page</button>
+</form>
 </body>
 </html>
