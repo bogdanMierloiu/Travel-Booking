@@ -27,14 +27,12 @@ public class ReservationService {
     private final ReservationRepository reservationRepository;
 
     public ReservationResponse add(ReservationRequest reservationRequest){
-        User user = userRepository.findById(reservationRequest.getUserId()).orElseThrow();
-        Destination destination = destinationRepository.findById(reservationRequest.getDestinationId()).orElseThrow();
         Reservation reservation = new Reservation();
         reservation.setDepartureDate(reservationRequest.getDepartureDate());
         reservation.setArrivalDate(reservationRequest.getArrivalDate());
         reservation.setNumberOfPeople(reservationRequest.getNumberOfPeople());
-        reservation.setUser(user);
-        reservation.setDestination(destination);
+        reservation.setUser(userRepository.findById(reservationRequest.getUserId()).orElseThrow());
+        reservation.setDestination(destinationRepository.findById(reservationRequest.getDestinationId()).orElseThrow());
         return reservationMapper.map(reservationRepository.save(reservation));
     }
 

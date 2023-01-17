@@ -1,4 +1,4 @@
-package ro.turism.sda.project.controller;
+package ro.turism.sda.project.controller.rest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

@@ -20,6 +20,8 @@ public class Destination {
     private String destinationName;
     private Integer price;
 
+    private String description;
+
     @OneToMany(
             cascade = CascadeType.ALL,
             orphanRemoval = true)

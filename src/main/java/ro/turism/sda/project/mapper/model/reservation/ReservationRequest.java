@@ -12,8 +12,6 @@ public class ReservationRequest {
 
     private Byte numberOfPeople;
 
-    private String description;
-
     private Integer userId;
 
     private Integer destinationId;

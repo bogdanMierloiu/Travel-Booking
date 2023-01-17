@@ -22,6 +22,7 @@ public class DestinationService {
         Destination destination = new Destination();
         destination.setDestinationName(destinationRequest.getDestinationName());
         destination.setPrice(destinationRequest.getPrice());
+        destination.setDescription(destinationRequest.getDescription());
         return destinationMapper.map(destinationRepository.save(destination));
     }
 
@@ -37,5 +38,6 @@ public class DestinationService {
         Destination destination = destinationRepository.findById(destinationRequest.getId()).orElseThrow();
         destination.setDestinationName(destinationRequest.getDestinationName());
         destination.setPrice(destinationRequest.getPrice());
+        destination.setDescription(destinationRequest.getDescription());
     }
 }

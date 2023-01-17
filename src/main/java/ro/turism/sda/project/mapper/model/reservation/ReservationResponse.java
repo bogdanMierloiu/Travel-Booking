@@ -18,8 +18,6 @@ public class ReservationResponse {
 
     private Byte numberOfPeople;
 
-    private String description;
-
     private UserResponse user;
 
     private DestinationResponse destination;

@@ -7,5 +7,6 @@ public class DestinationResponse {
     private Integer id;
     private String destinationName;
     private Integer price;
+    private String description;
 
 }

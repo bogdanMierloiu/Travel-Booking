@@ -10,7 +10,7 @@ import ro.turism.sda.project.mapper.model.user.UserResponse;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-17T08:38:59+0200",
+    date = "2023-01-17T09:33:16+0200",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 18.0.2 (Amazon.com Inc.)"
 )
 @Component

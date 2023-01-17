@@ -10,7 +10,7 @@ import ro.turism.sda.project.mapper.model.destination.DestinationResponse;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-17T08:38:58+0200",
+    date = "2023-01-17T09:33:16+0200",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 18.0.2 (Amazon.com Inc.)"
 )
 @Component
@@ -27,6 +27,7 @@ public class DestinationMapperImpl implements DestinationMapper {
         destination.setId( destinationRequest.getId() );
         destination.setDestinationName( destinationRequest.getDestinationName() );
         destination.setPrice( destinationRequest.getPrice() );
+        destination.setDescription( destinationRequest.getDescription() );
 
         return destination;
     }
@@ -42,6 +43,7 @@ public class DestinationMapperImpl implements DestinationMapper {
         destinationResponse.setId( destination.getId() );
         destinationResponse.setDestinationName( destination.getDestinationName() );
         destinationResponse.setPrice( destination.getPrice() );
+        destinationResponse.setDescription( destination.getDescription() );
 
         return destinationResponse;
     }

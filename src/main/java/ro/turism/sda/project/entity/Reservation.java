@@ -22,8 +22,6 @@ public class Reservation {
 
     private Byte numberOfPeople;
 
-    private String description;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @ToString.Exclude
     private User user;
