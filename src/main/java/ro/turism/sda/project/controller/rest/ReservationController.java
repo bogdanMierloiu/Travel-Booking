@@ -2,10 +2,8 @@ package ro.turism.sda.project.controller.rest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ro.turism.sda.project.mapper.model.reservation.ReservationRequest;
-import ro.turism.sda.project.mapper.model.reservation.ReservationResponse;
-import ro.turism.sda.project.mapper.model.user.UserRequest;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.reservation.ReservationRequest;
+import ro.turism.sda.project.mapper.dto.reservation.ReservationResponse;
 import ro.turism.sda.project.service.ReservationService;
 
 import java.util.List;

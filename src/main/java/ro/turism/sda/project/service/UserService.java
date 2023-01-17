@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import ro.turism.sda.project.entity.User;
 import ro.turism.sda.project.mapper.UserMapper;
 //import ro.turism.sda.project.mapper.model.email.EmailDetails;
-import ro.turism.sda.project.mapper.model.user.UserRequest;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.user.UserRequest;
+import ro.turism.sda.project.mapper.dto.user.UserResponse;
 import ro.turism.sda.project.repository.UserRepository;
 
 import java.util.List;

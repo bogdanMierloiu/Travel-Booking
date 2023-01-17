@@ -5,12 +5,12 @@ import java.util.List;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 import ro.turism.sda.project.entity.User;
-import ro.turism.sda.project.mapper.model.user.UserRequest;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.user.UserRequest;
+import ro.turism.sda.project.mapper.dto.user.UserResponse;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-17T09:33:16+0200",
+    date = "2023-01-17T11:41:19+0200",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 18.0.2 (Amazon.com Inc.)"
 )
 @Component

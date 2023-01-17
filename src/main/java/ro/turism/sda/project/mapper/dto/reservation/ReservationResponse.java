@@ -1,10 +1,8 @@
-package ro.turism.sda.project.mapper.model.reservation;
+package ro.turism.sda.project.mapper.dto.reservation;
 
-import jakarta.persistence.Id;
 import lombok.Data;
-import ro.turism.sda.project.mapper.model.destination.DestinationResponse;
-import ro.turism.sda.project.mapper.model.user.UserRequest;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.destination.DestinationResponse;
+import ro.turism.sda.project.mapper.dto.user.UserResponse;
 
 import java.time.LocalDate;
 

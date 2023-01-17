@@ -7,15 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ro.turism.sda.project.entity.Destination;
-import ro.turism.sda.project.entity.User;
-import ro.turism.sda.project.mapper.model.destination.DestinationResponse;
-import ro.turism.sda.project.mapper.model.user.UserRequest;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.destination.DestinationResponse;
+import ro.turism.sda.project.mapper.dto.user.UserRequest;
+import ro.turism.sda.project.mapper.dto.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.user.WebUserRequest;
 import ro.turism.sda.project.service.DestinationService;
 import ro.turism.sda.project.service.UserService;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 @Controller
@@ -30,9 +27,16 @@ public class UserWebController {
     }
 
     @PostMapping("/addUser")
-    public String addUser(@ModelAttribute UserRequest request, Model model) {
-        UserResponse userResponse = userService.add(request);
+    public String addUser(@ModelAttribute WebUserRequest request, Model model) {
+        UserRequest userRequest = UserRequest.builder()
+                .name(request.getName())
+                .email(request.getEmail())
+                .build();
+        UserResponse userResponse = userService.add(userRequest);
+
+        DestinationResponse destinationResponse = destinationService.findById(request.getDestinationId());
         model.addAttribute("user", userResponse);
-        return "index";
+        model.addAttribute("destinationSelected", destinationResponse);
+        return "reservationPage";
     }
 }

@@ -1,4 +1,4 @@
-package ro.turism.sda.project.mapper.model.user;
+package ro.turism.sda.project.mapper.dto.user;
 
 import lombok.Data;
 

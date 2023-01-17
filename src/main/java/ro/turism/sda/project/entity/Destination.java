@@ -23,6 +23,7 @@ public class Destination {
     private String description;
 
     @OneToMany(
+            mappedBy = "destination",
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     @ToString.Exclude

@@ -2,8 +2,8 @@ package ro.turism.sda.project.mapper;
 
 import org.mapstruct.Mapper;
 import ro.turism.sda.project.entity.User;
-import ro.turism.sda.project.mapper.model.user.UserRequest;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.user.UserRequest;
+import ro.turism.sda.project.mapper.dto.user.UserResponse;
 
 import java.util.List;
 

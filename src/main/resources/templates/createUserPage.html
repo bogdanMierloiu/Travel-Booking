@@ -26,34 +26,12 @@
                            type="text" name="email" required>
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-form-label col-4"
-                       style="display: flex;">
-                    Password </label>
-                <div class="col-8">
-                    <input style=""
-                           type="text" name="password" required>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-form-label col-4"
-                       style="display: flex;">
-                    Age </label>
-                <div class="col-8">
-                    <input style=" width: 48%"
-                           type="number" name="age" required>
-                </div>
-            </div>
         </div>
+        <input type="hidden" name="destinationId" th:value="${destinationSelected.id}">
         <div style="display: inline-block; padding: 10px">
             <button
-                    type="submit" value="Create" class="btn btn-success"> Add
+                    type="submit" value="Create" class="btn btn-success"> Continue
             </button>
-            <form th:action="@{/manicurist/allManicurists}">
-                <button style=""
-                        type="submit" class="btn btn-danger">Cancel
-                </button>
-            </form>
         </div>
     </form>
 </div>

@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 import ro.turism.sda.project.entity.Destination;
 import ro.turism.sda.project.entity.Reservation;
 import ro.turism.sda.project.entity.User;
-import ro.turism.sda.project.mapper.model.destination.DestinationResponse;
-import ro.turism.sda.project.mapper.model.reservation.ReservationRequest;
-import ro.turism.sda.project.mapper.model.reservation.ReservationResponse;
-import ro.turism.sda.project.mapper.model.user.UserResponse;
+import ro.turism.sda.project.mapper.dto.destination.DestinationResponse;
+import ro.turism.sda.project.mapper.dto.reservation.ReservationRequest;
+import ro.turism.sda.project.mapper.dto.reservation.ReservationResponse;
+import ro.turism.sda.project.mapper.dto.user.UserResponse;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-01-17T09:33:17+0200",
+    date = "2023-01-17T11:41:20+0200",
     comments = "version: 1.5.2.Final, compiler: javac, environment: Java 18.0.2 (Amazon.com Inc.)"
 )
 @Component

@@ -2,8 +2,8 @@ package ro.turism.sda.project.mapper;
 
 import org.mapstruct.Mapper;
 import ro.turism.sda.project.entity.Reservation;
-import ro.turism.sda.project.mapper.model.reservation.ReservationRequest;
-import ro.turism.sda.project.mapper.model.reservation.ReservationResponse;
+import ro.turism.sda.project.mapper.dto.reservation.ReservationRequest;
+import ro.turism.sda.project.mapper.dto.reservation.ReservationResponse;
 import java.util.List;
 
 @Mapper

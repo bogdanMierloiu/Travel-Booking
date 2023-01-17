@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ro.turism.sda.project.entity.Destination;
 import ro.turism.sda.project.mapper.DestinationMapper;
-import ro.turism.sda.project.mapper.model.destination.DestinationRequest;
-import ro.turism.sda.project.mapper.model.destination.DestinationResponse;
+import ro.turism.sda.project.mapper.dto.destination.DestinationRequest;
+import ro.turism.sda.project.mapper.dto.destination.DestinationResponse;
 import ro.turism.sda.project.repository.DestinationRepository;
 
 import java.util.List;
@@ -26,8 +26,12 @@ public class DestinationService {
         return destinationMapper.map(destinationRepository.save(destination));
     }
 
-    public void deleteById(int id) {
+    public void deleteById(Integer id) {
         destinationRepository.deleteById(id);
+    }
+
+    public DestinationResponse findById(Integer id) {
+        return destinationMapper.map(destinationRepository.findById(id).orElseThrow());
     }
 
     public List<DestinationResponse> getAll() {

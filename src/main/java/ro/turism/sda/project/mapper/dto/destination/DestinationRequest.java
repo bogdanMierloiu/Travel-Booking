@@ -1,12 +1,11 @@
-package ro.turism.sda.project.mapper.model.destination;
+package ro.turism.sda.project.mapper.dto.destination;
 
 import lombok.Data;
 
 @Data
-public class DestinationResponse {
+public class DestinationRequest {
     private Integer id;
     private String destinationName;
     private Integer price;
     private String description;
-
 }
