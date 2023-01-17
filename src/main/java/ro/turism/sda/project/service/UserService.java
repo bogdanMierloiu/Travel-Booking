@@ -27,7 +27,6 @@ public class UserService {
         user.setName(userRequest.getName());
         user.setEmail(userRequest.getEmail());
 
-
 //        EmailDetails emailDetails = new EmailDetails();
 //        emailDetails.setRecipient(user.getEmail());
 //        emailDetails.setSubject("Test!");
@@ -47,8 +46,6 @@ public class UserService {
     public void updateUser(UserRequest userRequest) {
         User user = userRepository.findById(userRequest.getId()).orElseThrow();
         user.setName(userRequest.getName());
-//        user.setAge(userRequest.getAge());
-//        user.setEmail(userRequest.getEmail());
-//        user.setPassword(userRequest.getPassword());
+        user.setEmail(userRequest.getEmail());
     }
 }
