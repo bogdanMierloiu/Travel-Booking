@@ -24,23 +24,159 @@
     </style>
 </head>
 <body>
-<div style="display: flex">
-    <div>
+<div class="container text-center">
+    <div style="display: flex;">
         <div>
-            <img th:src="@{images/amsterdam.jpg}" alt="Amsterdam picture" width="150" height="210">
+            <div>
+                <img th:src="@{images/amsterdam.jpg}" alt="Amsterdam picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${amsterdam.destinationName}"></label>
+                    <label th:text="${amsterdam.description}"></label>
+                    <label th:text="${amsterdam.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${amsterdam.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
         </div>
         <div>
-            <label th:text="${amsterdam.destinationName}"></label>
-            <label th:text="${amsterdam.description}"></label>
-            <label th:text="${amsterdam.price + ' euro'}"></label>
-            <form th:action="@{/destination/get-destination}">
-                <input type="hidden" name="id" th:value="${amsterdam.id}">
-                <button type="submit"> Book </button>
-            </form>
+            <div>
+                <img th:src="@{images/athena.jpg}" alt="Athena picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${athena.destinationName}"></label>
+                    <label th:text="${athena.description}"></label>
+                    <label th:text="${athena.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${athena.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img th:src="@{images/frankfurt.jpg}" alt="frankfurt picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${frankfurt.destinationName}"></label>
+                    <label th:text="${frankfurt.description}"></label>
+                    <label th:text="${frankfurt.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${frankfurt.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
         </div>
     </div>
-
+    <div style="display: flex;">
+        <div>
+            <div>
+                <img th:src="@{images/luxembourg.jpg}" alt="luxembourg picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${luxembourg.destinationName}"></label>
+                    <label th:text="${luxembourg.description}"></label>
+                    <label th:text="${luxembourg.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${luxembourg.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img th:src="@{images/newYork.jpg}" alt="newYork picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${newYork.destinationName}"></label>
+                    <label th:text="${newYork.description}"></label>
+                    <label th:text="${newYork.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${newYork.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img th:src="@{images/paris.jpg}" alt="paris picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${paris.destinationName}"></label>
+                    <label th:text="${paris.description}"></label>
+                    <label th:text="${paris.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${paris.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div>
+            <div>
+                <img th:src="@{images/romeColosseum.jpg}" alt="romeColosseum picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${romeColosseum.destinationName}"></label>
+                    <label th:text="${romeColosseum.description}"></label>
+                    <label th:text="${romeColosseum.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${romeColosseum.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img th:src="@{images/sweden.jpg}" alt="sweden picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${sweden.destinationName}"></label>
+                    <label th:text="${sweden.description}"></label>
+                    <label th:text="${sweden.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${sweden.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img th:src="@{images/switzerland.jpg}" alt="switzerland picture" width="200px" height="300px">
+            </div>
+            <div style="display: block">
+                <div style="color: snow; display: block">
+                    <label th:text="${switzerland.destinationName}"></label>
+                    <label th:text="${switzerland.description}"></label>
+                    <label th:text="${switzerland.price + ' euro'}"></label>
+                </div>
+                <form th:action="@{/destination/get-destination}">
+                    <input type="hidden" name="id" th:value="${switzerland.id}">
+                    <button type="submit"> Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 <!--&lt;!&ndash;header&ndash;&gt;-->
 <!--<header>-->
@@ -115,7 +251,7 @@
 <!--    <div class="package-content">-->
 <!--        <div class="box">-->
 <!--            <div class="thum">-->
-<!--                <img src="/media/Switzerland.png">-->
+<!--                <img src="/media/switzerland.jpg">-->
 <!--                <h3>$112</h3>-->
 <!--            </div>-->
 
@@ -136,7 +272,7 @@
 
 <!--        <div class="box">-->
 <!--            <div class="thum">-->
-<!--                <img src="/media/Paris.png">-->
+<!--                <img src="/media/paris.jpg">-->
 <!--                <h3>$47</h3>-->
 <!--            </div>-->
 
@@ -198,7 +334,7 @@
 <!--        </div>-->
 
 <!--        <div class="col-content">-->
-<!--            <img src="/media/Sweeden.jpg">-->
+<!--            <img src="/media/sweden.jpg">-->
 <!--            <h5>Suedia</h5>-->
 <!--            <p>Stockholm</p>-->
 <!--        </div>-->
@@ -210,7 +346,7 @@
 <!--        </div>-->
 
 <!--        <div class="col-content">-->
-<!--            <img src="/media/Luxembourg.jpg">-->
+<!--            <img src="/media/luxembourg.jpg">-->
 <!--            <h5>Luxembourg</h5>-->
 <!--            <p>Orasul Luxembourg</p>-->
 <!--        </div>-->
